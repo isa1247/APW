@@ -1,68 +1,87 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mi Hoja de Vida</title>
-
+    <title>Hoja de Vida</title>
     <style>
         body {
-            font-family: 'Times New Roman', Times, serif, sans-serif;
+            font-family: Arial, Helvetica, sans-serif, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #44f6d5;
+            background: linear-gradient(to bottom, #ea9ccc, #55dede);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         header {
-            background-color: #e0f07e;
-            color: #0b0a0a;
+            background:linear-gradient(to bottom, #61e8b9, #e09ded);
+            color: #020000;
             text-align: center;
+            padding: 40px 0;
+            width: 100%; /* Ancho al 100% del contenedor */
+        }
+
+        .container {
+            background: linear-gradient(to bottom, #f3f1f1, #e0cdbc);
             padding: 20px;
-        }
-
-        #container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #fffcfc;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-        }
-
-        #personal-info {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        #personal-info img {
-            max-width: 150px;
-            border-radius: 50%;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            width: 800px;
         }
 
         h1 {
-            font-size: 24px;
-            margin: 0;
-        }
-
-        h2 {
-            font-size: 20px;
-        }
-
-        .section {
-            margin-top: 30px;
-        }
-
-        .reference-table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-
-        .reference-table th, .reference-table td {
-            border: 1px solid #63f4dcc3;
-            padding: 10px;
+            color: #040000;
             text-align: center;
         }
 
-        .reference-table th {
-            background-color: #0a0a09;
+        h2 {
+            color: #555;
+
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #0d0c0c;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        .section {
+            margin-top: 20px;
+        }
+
+        .section-header {
+            background-color: #000000;
             color: #fbfbfb;
+            padding: 10px;
+        }
+
+        .section-content {
+            padding: 10px;
+        }
+
+        .profile-image {
+            max-width: 200px;
+            border-radius: 15%;
+            margin: 20px auto;
+            display: block;
         }
     </style>
 </head>
@@ -70,85 +89,91 @@
     <header>
         <h1>Mi Hoja de Vida</h1>
     </header>
+    <div class="container">
+        <!-- Agrega una imagen de perfil -->
+        <img class="profile-image" src="C:\Users\Usuario\Downloads\Foto1.jpg.jpeg" alt="Tu Nombre">
+        <h1>Isabella Aguilar</h1>
 
-    <div id="container">
-        <div id="personal-info">
-            <p><br>
-            </p>
-            <img src="C:\Users\Usuario\Downloads\Foto1.jpg.jpeg" alt="Mi Foto">
-            <p><br>
-               </p>
-            <h1>Isabella Verónica Aguilar Aguilera</h1>
-            
-            <p>Fecha de nacimiento: 11 de Febrero del 2003</p>
-            <p>Edad: 20 años</p>
-            <p>Signo zodiacal: Acuario</p>
-            <p>Número telefónico: 0968704470</p>
-            <p>Correo Electrónico: isabellaaguilar1247@gmail.com</p>
-            <p>Redes sociales: @isabellaaguilar1247 (Instagram y Tik Tok), Isabella Aguilar (Facebook). </p>
-            <p><br>
-            </p>
+        <div class="section">
+            <div class="section-header">Información Personal</div>
+            <div class="section-content">
+                <p><strong>Nombre completo:</strong> Isabella Verónica Aguilar Aguilera</p>
+                <p><strong>Edad:</strong> 20 años</p>
+                <p><strong>Fecha de nacimiento:</strong> 11 de Febrero del 2003</p>
+                <p><strong>Número telefónico:</strong> 0968704470</p>
+                <p><strong>Correo Electrónico:</strong> isabellaaguilar1247@gmail.com</p>
+                <p><strong>Redes sociales:</strong>
+                    
+                    @isabellaaguilar1247 (Instagram y Tik Tok), 
+                  
+                    Isabella Aguilar (Facebook). </p>
+                </p>
+                <!-- Información personal -->
+            </div>
         </div>
 
         <div class="section">
-            <h2>Estudios Realizados</h2>
-            <p>Educación básica elemental y media - Unidad Educativa Isaac Newton (Antiguo Talentos). </p>
-            <p>Educación básica superior y bachillerato - Unidad Educativa Stella Maris.
-            <p>Diploma del Bachillerato Internacional - Unidad Educativa Stella Maris.   
-            <p>Estudios del idioma inglés - Instituto de Idiomas Multidiomas Ecuador.
-            </p>
-            <p><br>
-            </p>
+            <div class="section-header">Experiencia Laboral</div>
+            <div class="section-content">
+                <p><strong>Sectores de experiencia</strong> Área de inglés, escritura de libros y elaboración de monografías estilo Bachillerato Internacional.</p>
+                <!-- Experiencia laboral -->
+            </div>
         </div>
 
         <div class="section">
-            <h2>Experiencia Laboral</h2>
-            <p>No poseo experiencia laboral .</p>
-            <p><br>
-            </p>
+            <div class="section-header">Educación</div>
+            <div class="section-content">
+                <p><strong>Educación inicial y básica media:</strong> Unidad Edicativa Isaac Newton (Antiguo Talentos).</p>
+                <p><strong>Educación básica superior:</strong>  Unidad Educativa Stella Maris.</p>
+                <p><strong>Educación de bachillerato Internacional:</strong> Unidad Educativa Stella Maris.</p>
+            </div>
         </div>
 
         <div class="section">
-            <h2>Capacitaciones</h2>
-            <p>Inspiring Study Conference with Google - 21 de Noviembre del 2021</p>
-            <p>TICEC - del 12 al 14 de Octubre del 2022</p>
-            <p>Cumbre Jóvenes por el cambio - 02 de Septiembre 2023</p>
-            <p><br>
-            </p>
+            <div class="section-header">Habilidades</div>
+            <div class="section-content">
+                <p><strong>Nivel de Inglés:</strong> B1 Avalado por el Bachillerato Internacional y el curso Rosetta Stone.</p>
+                <p><strong>Área de literatura:</strong>  Escritora reconocida en la plataforma Wattpad, con 2 libros publicados con alcance internacional.</p>
+                <p><strong>Informática:</strong> Certificado de Google por conocer más su usabilidad, Certificado de Cisco en sistemas operativo Linux.</p> 
+                <!-- Habilidades -->
+            </div>
         </div>
 
         <div class="section">
-            <h2>Referencias Personales</h2>
-            <table class="reference-table">
-                <tr>
-                    <th>Nombre</th>
-                    <th>Parentesco</th>
-                    <th>Cargo/Profesión</th>
-                    <th>Teléfono</th>
-                    <th>Correo Electrónico</th>
-                </tr>
-                <tr>
-                    <td>Verónica Aguilera</td>
-                    <td>Mamá</td>
-                    <td>Ingeniera Comercial</td>
-                    <td>0998150624</td>
-                    <td>va.aguilera76@hotmail.com</td>
-                </tr>
-                <tr>
-                    <td>Ana Paula Uribe</td>
-                    <td>Prima</td>
-                    <td>Psicóloga clínica</td>
-                    <td>0981881030</td>
-                    <td>anapau.uribe@gmail.com</td>
-                </tr>
-                <tr>
-                    <td>Sebastián Aguilar</td>
-                    <td>Primo</td>
-                    <td>Ingeniero Civil</td>
-                    <td>0982538521</td>
-                    <td>danisebas.aguilar@yahoo.com</td>
-                </tr>
-            </table>
+            <div class="section-header">Referencias</div>
+            <div class="section-content">
+                <table>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Parentesco</th>
+                        <th>Profesión</th>
+                        <th>Teléfono</th>
+                        <th>Correo Electrónico</th>
+                    </tr>
+                    <tr>
+                        <td>Verónica Aguilera</td>
+                        <td>Mamá</td>
+                        <td>Ingeniera Comercial</td>
+                        <td>0998150624</td>
+                        <td>va.aguilera76@hotmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>Ana Paula Uribe</td>
+                        <td>Prima</td>
+                        <td>Psicóloga clínica</td>
+                        <td>0981881030</td>
+                        <td>anapau.uribe@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>Sebastián Aguilar</td>
+                        <td>Primo</td>
+                        <td>Ingeniero Civil</td>
+                        <td>0982538521</td>
+                        <td>danisebas.aguilar@yahoo.com</td>
+                    </tr>
+                    <!-- Agrega más filas según sea necesario -->
+                </table>
+            </div>
         </div>
     </div>
 </body>
