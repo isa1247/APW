@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hoja de Vida</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #ea9ccc, #55dede);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            background:linear-gradient(to bottom, #61e8b9, #e09ded);
+            color: #020000;
+            text-align: center;
+            padding: 40px 0;
+            width: 100%; /* Ancho al 100% del contenedor */
+        }
+
+        .container {
+            background: linear-gradient(to bottom, #f3f1f1, #e0cdbc);
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            width: 800px;
+        }
+
+        h1 {
+            color: #040000;
+            text-align: center;
+        }
+
+        h2 {
+            color: #555;
+
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        table, th, td {
+            border: 1px solid #0d0c0c;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        .section {
+            margin-top: 20px;
+        }
+
+        .section-header {
+            background-color: #000000;
+            color: #fbfbfb;
+            padding: 10px;
+        }
+
+        .section-content {
+            padding: 10px;
+        }
+
+        .profile-image {
+            max-width: 200px;
+            border-radius: 15%;
+            margin: 20px auto;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mi Hoja de Vida</h1>
+    </header>
+    <div class="container">
+        <!-- Agrega una imagen de perfil -->
+        <img class="profile-image" src="C:\Users\Usuario\Downloads\Foto1.jpg.jpeg" alt="Tu Nombre">
+        <h1>Isabella Aguilar</h1>
+
+        <div class="section">
+            <div class="section-header">Información Personal</div>
+            <div class="section-content">
+                <p><strong>Nombre completo:</strong> Isabella Verónica Aguilar Aguilera</p>
+                <p><strong>Edad:</strong> 20 años</p>
+                <p><strong>Fecha de nacimiento:</strong> 11 de Febrero del 2003</p>
+                <p><strong>Número telefónico:</strong> 0968704470</p>
+                <p><strong>Correo Electrónico:</strong> isabellaaguilar1247@gmail.com</p>
+                <p><strong>Redes sociales:</strong>
+                    
+                    @isabellaaguilar1247 (Instagram y Tik Tok), 
+                  
+                    Isabella Aguilar (Facebook). </p>
+                </p>
+                <!-- Información personal -->
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">Experiencia Laboral</div>
+            <div class="section-content">
+                <p><strong>Sectores de experiencia</strong> Área de inglés, escritura de libros y elaboración de monografías estilo Bachillerato Internacional.</p>
+                <!-- Experiencia laboral -->
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">Educación</div>
+            <div class="section-content">
+                <p><strong>Educación inicial y básica media:</strong> Unidad Edicativa Isaac Newton (Antiguo Talentos).</p>
+                <p><strong>Educación básica superior:</strong>  Unidad Educativa Stella Maris.</p>
+                <p><strong>Educación de bachillerato Internacional:</strong> Unidad Educativa Stella Maris.</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">Habilidades</div>
+            <div class="section-content">
+                <p><strong>Nivel de Inglés:</strong> B1 Avalado por el Bachillerato Internacional y el curso Rosetta Stone.</p>
+                <p><strong>Área de literatura:</strong>  Escritora reconocida en la plataforma Wattpad, con 2 libros publicados con alcance internacional.</p>
+                <p><strong>Informática:</strong> Certificado de Google por conocer más su usabilidad, Certificado de Cisco en sistemas operativo Linux.</p> 
+                <!-- Habilidades -->
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">Referencias</div>
+            <div class="section-content">
+                <table>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Parentesco</th>
+                        <th>Profesión</th>
+                        <th>Teléfono</th>
+                        <th>Correo Electrónico</th>
+                    </tr>
+                    <tr>
+                        <td>Verónica Aguilera</td>
+                        <td>Mamá</td>
+                        <td>Ingeniera Comercial</td>
+                        <td>0998150624</td>
+                        <td>va.aguilera76@hotmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>Ana Paula Uribe</td>
+                        <td>Prima</td>
+                        <td>Psicóloga clínica</td>
+                        <td>0981881030</td>
+                        <td>anapau.uribe@gmail.com</td>
+                    </tr>
+                    <tr>
+                        <td>Sebastián Aguilar</td>
+                        <td>Primo</td>
+                        <td>Ingeniero Civil</td>
+                        <td>0982538521</td>
+                        <td>danisebas.aguilar@yahoo.com</td>
+                    </tr>
+                    <!-- Agrega más filas según sea necesario -->
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
