@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datos del Cliente</title>
+    <style>
+        body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f3d5e7;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background:linear-gradient(to bottom, #beb1ec, #e09ded);
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 45px;
+    width: 600px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 40px;
+    color: #333;
+}
+
+main {
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    font-size: 16px;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border: 3px solid #f7f375;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #53f6db;
+    color: #000000;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #33f1d1;
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Datos del Cliente</h1>
+        </header>
+        <main>
+            <form id="cliente-form">
+                <div class="form-group">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" id="apellidos" name="apellidos" required>
+                </div>
+                <div class="form-group">
+                    <label for="fechaNacimiento">Fecha de Nacimiento:</label>
+                    <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+                </div>
+                <div class="form-group">
+                    <label for="edad">Edad:</label>
+                    <input type="number" id="edad" name="edad" required>
+                </div>
+                <div class="form-group">
+                    <label for="cedula">Número de Cédula:</label>
+                    <input type="text" id="cedula" name="cedula" required>
+                </div>
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="tel" id="telefono" name="telefono" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="direccion">Dirección Domiciliaria:</label>
+                    <textarea id="direccion" name="direccion" rows="4" required></textarea>
+                </div>
+                <button type="submit">Guardar</button>
+            </form>
+        </main>
+    </div>
+    <script>
+        // Coloca aquí el JavaScript completo
+        document.addEventListener("DOMContentLoaded", function() {
+            const form = document.getElementById("cliente-form");
+
+            form.addEventListener("submit", function(event) {
+                event.preventDefault();
+
+                const nombre = document.getElementById("nombre").value;
+                // Obtener otros valores del formulario aquí
+
+                console.log("Nombre:", nombre);
+                // Mostrar otros valores en la consola aquí
+            });
+        });
+    </script>
+</body>
+</html>
+</body>
