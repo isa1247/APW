@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #eaeaa7, #e7ab5c);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .calculadora {
+            background: linear-gradient(45deg, #fff, #f2f2f2);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            padding: 50px;
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: linear-gradient(135deg, #db34c2, #22d3c5);
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background: linear-gradient(135deg, #2980b9, #7d3c98);
+        }
+
+        #resultado {
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background: linear-gradient(45deg, #f9f9f9, #e5e5e5);
+            text-align: left;
+        }
+
+        #resultado p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculadora">
+        <h1>Calculadora</h1>
+        <form id="formulario-calculadora">
+            <label for="numero1">Número 1:</label>
+            <input type="number" id="numero1" required>
+            <br>
+            <label for="numero2">Número 2:</label>
+            <input type="number" id="numero2" required>
+            <br>
+            <button type="button" onclick="calcular()">Calcular</button>
+        </form>
+        <div id="resultado"></div>
+    </div>
+
+    <script>
+        function calcular() {
+            const numero1 = parseFloat(document.getElementById('numero1').value);
+            const numero2 = parseFloat(document.getElementById('numero2').value);
+            const resultadoDiv = document.getElementById('resultado');
+            resultadoDiv.innerHTML = '';
+
+            for (let i = 1; i <= 5; i++) {
+                let resultadoOperacion;
+                switch (i) {
+                    case 1:
+                        resultadoOperacion = numero1 + numero2;
+                        resultadoDiv.innerHTML += `<p>Suma: ${numero1} + ${numero2} = ${resultadoOperacion}</p>`;
+                        break;
+                    case 2:
+                        resultadoOperacion = numero1 - numero2;
+                        resultadoDiv.innerHTML += `<p>Resta: ${numero1} - ${numero2} = ${resultadoOperacion}</p>`;
+                        break;
+                    case 3:
+                        resultadoOperacion = numero1 * numero2;
+                        resultadoDiv.innerHTML += `<p>Multiplicación: ${numero1} * ${numero2} = ${resultadoOperacion}</p>`;
+                        break;
+                    case 4:
+                        if (numero2 !== 0) {
+                            resultadoOperacion = numero1 / numero2;
+                            resultadoDiv.innerHTML += `<p>División: ${numero1} / ${numero2} = ${resultadoOperacion}</p>`;
+                        } else {
+                            resultadoDiv.innerHTML += `<p>División por cero no está permitida</p>`;
+                        }
+                        break;
+                    case 5:
+                        resultadoOperacion = numero1 % numero2;
+                        resultadoDiv.innerHTML += `<p>Módulo: ${numero1} % ${numero2} = ${resultadoOperacion}</p>`;
+                        break;
+                    default:
+                        break;
+                }
+            }
+        }
+    </script>
+</body>
+</html>
+
+
