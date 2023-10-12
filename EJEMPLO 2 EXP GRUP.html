@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Lista de Tareas</h1>
+    <ul id="listaTareas">
+        <!-- Lista de tareas se generará aquí -->
+    </ul>
+    <input type="text" id="nuevaTarea" placeholder="Nueva tarea">
+    <button id="agregarTarea">Agregar Tarea</button>
+
+    <script>
+        // Obtener elementos del DOM
+        const listaTareas = document.getElementById('listaTareas');
+        const nuevaTareaInput = document.getElementById('nuevaTarea');
+        const agregarTareaBtn = document.getElementById('agregarTarea');
+
+        // Función para agregar una nueva tarea a la lista
+        function agregarTarea() {
+            const nuevaTareaTexto = nuevaTareaInput.value;
+            if (nuevaTareaTexto.trim() !== '') {
+                const nuevaTarea = document.createElement('li');
+                nuevaTarea.textContent = nuevaTareaTexto;
+
+                // Agregar botón de eliminación a cada tarea
+                const eliminarBtn = document.createElement('button');
+                eliminarBtn.textContent = 'Eliminar';
+                eliminarBtn.addEventListener('click', function () {
+                    listaTareas.removeChild(nuevaTarea);
+                });
+
+                nuevaTarea.appendChild(eliminarBtn);
+
+                listaTareas.appendChild(nuevaTarea);
+                nuevaTareaInput.value = ''; // Limpiar el campo de entrada
+            }
+        }
+
+        // Asignar un evento de clic al botón "Agregar Tarea"
+        agregarTareaBtn.addEventListener('click', agregarTarea);
+
+        // También podemos agregar una tarea cuando se presiona la tecla "Enter" en el campo de entrada
+        nuevaTareaInput.addEventListener('keydown', function (event) {
+            if (event.key === 'Enter') {
+                agregarTarea();
+            }
+        });
+    </script>
+</body>
